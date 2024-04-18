@@ -1,11 +1,14 @@
-// screens/SegundaTela.js
 import React from 'react';
-import {View, Text} from 'react-native';
+import { View, Text, Button } from 'react-native';
 
-function SegundaTela() {
+function SegundaTela({ navigation }) {
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Segunda Tela</Text>
+      <Button
+        title="Ir para a Terceira Tela"
+        onPress={() => navigation.navigate('TerceiraTela')}
+      />
     </View>
   );
 }
